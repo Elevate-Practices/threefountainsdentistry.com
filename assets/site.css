@@ -276,7 +276,7 @@ svg{width:1.1em;height:1.1em;fill:currentColor;flex:none}
 @media (max-width:560px){.foot-in{grid-template-columns:1fr}}
 .dock{display:none}
 @media (max-width:760px){
-  .dock{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,32,41,.95);border-top:1px solid var(--line)}
+  .dock{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 84px calc(10px + env(safe-area-inset-bottom));background:rgba(13,32,41,.95);border-top:1px solid var(--line)}
   .dock a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;font-weight:800;text-decoration:none;color:#fff;border:2px solid rgba(255,255,255,.5)}
   .dock .dock-book{background:var(--sky);color:var(--ink);border-color:var(--sky)}
   body{padding-bottom:4px}
