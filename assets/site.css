@@ -357,3 +357,6 @@ svg{width:1.1em;height:1.1em;fill:currentColor;flex:none}
 
 .rev-ph{text-align:center;padding:60px 24px!important;color:var(--text)}
 .rev-ph p{color:var(--text)!important}.rev-ph-t{font-size:34px;color:#E8A23A!important;letter-spacing:4px}
+
+/* Mobile action bar: chat bubble sits on the right only */
+.dock{padding-left:12px!important}
