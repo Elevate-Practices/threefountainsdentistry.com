@@ -41,11 +41,32 @@ svg{width:1.1em;height:1.1em;fill:currentColor;flex:none}
 .top{position:sticky;top:0;z-index:50;background:rgba(13,32,41,.88);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
 .top-in{display:flex;align-items:center;gap:22px;min-height:76px}
 .brand img{height:46px;width:auto}
-.nav{display:flex;gap:4px;margin-left:auto}
-.nav a{color:#E8F2F7;text-decoration:none;font-weight:700;font-size:15px;padding:8px 12px;border-radius:999px}
-.nav a:hover,.nav a[aria-current]{background:rgba(255,255,255,.1);color:#fff}
+.nav{display:flex;flex-wrap:nowrap;gap:4px;margin-left:auto}
+.nav>a,.has-mega>a{color:#E8F2F7;text-decoration:none;font-weight:700;font-size:15px;padding:8px 12px;border-radius:999px;white-space:nowrap}
+.nav>a:hover,.nav>a[aria-current],.has-mega>a:hover,.has-mega>a[aria-current],.has-mega:focus-within>a{background:rgba(255,255,255,.1);color:#fff}
 .top-cta{display:flex;align-items:center;gap:14px}
+.top-cta .btn,.top-cta .lang{white-space:nowrap}
 .lang{color:#fff;font:700 13px/1 var(--sans);text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:8px 12px;border-radius:999px}
+/* services mega menu: solid navy panel under the sticky header, one column per group + a light "not sure?" card */
+.has-mega{position:static}
+.has-mega>a{display:inline-flex;align-items:center;gap:4px}
+.has-mega>a svg{width:14px;height:14px;opacity:.7;transition:transform .2s}
+.mega{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s}
+.has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.has-mega:hover>a svg,.has-mega:focus-within>a svg{transform:rotate(180deg)}
+.mega-in{display:grid;grid-template-columns:1fr 1fr 1fr 1.15fr;gap:36px;padding:30px 24px 36px}
+.mega-col{display:grid;align-content:start;gap:2px}
+.mega-h{display:flex;align-items:center;gap:10px;margin:0 0 10px;font:800 20px/1.1 var(--serif);color:#fff}
+.mega-ic{width:36px;height:36px;border-radius:12px;background:var(--primary);display:inline-flex;align-items:center;justify-content:center;color:var(--sky);flex:none}
+.mega-ic svg{width:18px;height:18px}
+.mega-col>a:not(.btn):not(.mega-link){color:#C9DCE6;text-decoration:none;font-weight:600;font-size:15px;padding:7px 0;border-top:1px solid var(--line)}
+.mega-col>a:not(.btn):not(.mega-link):hover,.mega-col>a[aria-current]{color:var(--sky)}
+.mega-all{background:var(--bg);color:var(--text);border-radius:var(--r);padding:24px;gap:12px}
+.mega-all .mega-h{margin:0;color:var(--deep);font-size:22px}
+.mega-p{margin:0;font-size:15px;color:var(--text)}
+.nav .mega .btn,.nav .mega .btn:hover{color:var(--ink);opacity:1;justify-content:center;font-size:16px;min-height:48px;padding:12px 24px}   /* the .nav link rules would otherwise restyle the button */
+.mega-link,.nav .mega .mega-link:hover{display:inline-flex;align-items:center;gap:6px;color:var(--sky-text);font-weight:800;font-size:15px;text-decoration:none}
+.mega-link:hover{text-decoration:underline}
 .tel{display:flex;align-items:center;gap:6px;color:#fff;text-decoration:none;font-weight:700;white-space:nowrap}
 .top .btn{min-height:44px;padding:10px 20px}
 .menu{display:none;margin-left:auto}
