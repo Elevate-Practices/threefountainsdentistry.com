@@ -381,3 +381,7 @@ svg{width:1.1em;height:1.1em;fill:currentColor;flex:none}
 
 /* Mobile action bar: chat bubble sits on the right only */
 .dock{padding-left:12px!important}
+
+/* hover pill on mega-menu links, Gunnell-style (Chris, Oct 19 2026) */
+.mega-col>a:not(.btn):not(.mega-link){padding:7px 10px;margin-inline:-10px;border-radius:6px;transition:background .15s,color .15s}
+.mega-col>a:not(.btn):not(.mega-link):hover,.mega-col>a:not(.btn):not(.mega-link)[aria-current]{background:rgba(255,255,255,.09);color:var(--sky);text-decoration:none;opacity:1}
